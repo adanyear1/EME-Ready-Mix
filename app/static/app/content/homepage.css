@@ -1,0 +1,38 @@
+body {
+}
+
+.jumbotron {
+    background-image: url("../images/homeb.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 480px;
+    width: auto;
+}
+
+.row{
+    border-color: maroon;
+    color: black;
+    width: auto;
+}
+
+.col-1{
+    background-image: url("../images/services.png");
+    text-align: center;
+    height: 300px;
+    width: 300px;
+}
+
+.col-2 {
+    background-image: url("../images/gallery.png");
+    text-align: center;
+    height: 300px;
+    width: 300px;
+}
+
+.col-3 {
+    background-image: url("../images/quotehome.png");
+    text-align: center;
+    height: 300px;
+    width: 300px;
+}

@@ -1,0 +1,34 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'app/content/homepage.css' %}" />
+
+<div class="image-hero">
+    <div class="jumbotron">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="col-1">
+            <h2>Services</h2>
+            <a href="services/"></a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="col-2">
+            <h2>Gallery</h2>
+            <p><a class="btn btn-default" href="gallery/">Learn more &raquo;</a></p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="col-3">
+            <h2>Quick Quote</h2>
+            <p><a class="btn btn-default" href="quickquote/">Learn more &raquo;</a></p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
