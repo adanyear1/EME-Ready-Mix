@@ -5,6 +5,7 @@ Definition of views.
 from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpRequest
+from django.core.mail import send_mail
 
 def home(request):
     """Renders the home page."""
@@ -13,21 +14,46 @@ def home(request):
         request,
         'app/index.html',
         {
-            'title':'Home Page',
-            'year':datetime.now().year,
         }
     )
 
 def contact(request):
     """Renders the contact page."""
-    assert isinstance(request, HttpRequest)
+    #assert isinstance(request, HttpRequest)
+    if request.method == "POST":
+        company = request.POST.get('company')
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        message = request.POST.get('message')
+        subject = name+(" From ")+company+(" wants to connect with EME Ready Mix")
+
+        data = {
+            'company': company,
+            'name': name,
+            'email': email,
+            'phone': phone,
+            'message': message,
+            'subject': subject,
+        }
+
+        message = '''
+        From: {} 
+
+        Email: {}
+
+        Company: {}
+
+        Phone Number: {}
+
+        {}
+        '''.format(data['name'], data['email'], data['company'], data['phone'], data['message'])
+        send_mail(data['subject'], message, '', ['magarciar931@gmail.com'])
     return render(
         request,
         'app/contact.html',
         {
-            'title':'Contact Us',
-            'message':'We Are Happy To Connect With You!',
-            'year':datetime.now().year,
+            
         }
     )
 
@@ -38,9 +64,6 @@ def about(request):
         request,
         'app/about.html',
         {
-            'title':'About',
-            'message':'Your application description page.',
-            'year':datetime.now().year,
         }
     )
 
@@ -51,21 +74,53 @@ def services(request):
         request,
         'app/services.html',
         {
-            'title':'Our Services',
-            'year':datetime.now().year,
         }
     )
 
 def quickquote(request):
     """Renders the quotes page."""
-    assert isinstance(request, HttpRequest)
+    #assert isinstance(request, HttpRequest)
+    if request.method == "POST":
+        company = request.POST.get('company')
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        projectdate = request.POST.get('projectdate')
+        address = request.POST.get('address')
+        message = request.POST.get('message')
+        subject = name+(" From ")+company+(" Wants a Quote for a Project")
+
+        data = {
+            'company': company,
+            'name': name,
+            'email': email,
+            'phone': phone,
+            'projectdate': projectdate,
+            'address': address,
+            'message': message,
+            'subject': subject,
+        }
+
+        message = '''
+        From: {} 
+
+        Email: {}
+
+        Company: {}
+
+        Phone Number: {}
+
+        Project Date: {}
+
+        Project Address: {}
+
+        {}
+        '''.format(data['name'], data['email'], data['company'], data['phone'], data['projectdate'], data['address'], data['message'])
+        send_mail(data['subject'], message, '', ['magarciar931@gmail.com'])
     return render(
         request,
         'app/quickquote.html',
         {
-            'title':'Recieve A Fast Quote ',
-            'message':'Tell us about your load and other requirements and we’ll provide a quick quote. You can also call us at 512-000-0000 or email us at sales@transco.com.',
-            'year':datetime.now().year,
         }
     )
 
@@ -76,7 +131,5 @@ def gallery(request):
         request,
         'app/gallery.html',
         {
-            'title':'Check Out Our Work ',
-            'year':datetime.now().year,
         }
     )

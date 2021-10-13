@@ -58,10 +58,12 @@
     <Folder Include="TransCo\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\static\app\content\about.css" />
     <Content Include="app\static\app\content\contact.css" />
     <Content Include="app\static\app\content\Gallery.css" />
     <Content Include="app\static\app\content\homepage.css" />
     <Content Include="app\static\app\content\quickquote.css" />
+    <Content Include="app\static\app\content\services.css" />
     <Content Include="app\templates\app\gallery.html" />
     <Content Include="app\templates\app\quickquote.html" />
     <Content Include="app\templates\app\services.html" />

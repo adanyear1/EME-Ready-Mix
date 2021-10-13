@@ -1,6 +1,6 @@
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top: 60px;
+    padding-bottom: 0px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -41,27 +41,146 @@ input[type="checkbox"].input-validation-error {
     display: none;
 }
 
+:root {
+    --navfooterbkg: #B3B6B7;
+    --navtext: #023e8a;
+    --header-color: white;
+    --header-font: 'Crimson Text', serif;
+}
+
+
+
 /*Navbar Editing*/
-.navbar-collapse{
+nav{
+    border-bottom: 0;
+}
+
+.navbar-fixed-top{
+    margin-bottom: 0px;
+}
+
+.navbar-collapse {
     padding-top: 0px;
 }
 
 .navbar {
-    background-color: lightgray;
-    border-color: lightgray;
+    background-color: var(--navfooterbkg);
+    border-color: var(--navfooterbkg);
+    position: absolute;
 }
 
-/*Area of where text is contained in the nabar*/
-.nav {
-}
 
 /*Nav Bar editing for each block of text*/
 .nav.navbar-nav li a {
-    color: maroon;
-    font: bold;
+    font-family: 'Arvo', serif;
+    font-family: 'Epilogue', sans-serif;
+    color: var(--navtext);
+    font-size: 1.3em;
 }
 
-footer{
+.nav.navbar-nav li a:hover{
+    background-color: var(--navfooterbkg);
+}
+
+/*Home Page Icons*/
+#icon{
+    color: var(--navtext);
+}
+
+/*Styling for page banners*/
+#pagebanner{
+    background-size: 100% 100%;
+    color: var(--header-color);
+    font-family: var(--header-font);
+}
+
+.pageheading{
+    vertical-align: middle;
+}
+
+footer {
     text-align: center;
-    color: red;
+    background-color: var(--navfooterbkg);
+}
+
+footer .row{
+    height: 350px;
+    width: 100%;
+}
+
+footer .site-map{
+    margin-top: 35px;
+    display: grid;
+    justify-content: left;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer .site-map a{
+    text-align: left;
+    color: var(--navtext);
+    font-family: 'Arvo', serif;
+    font-family: 'Epilogue', sans-serif;
+}
+
+footer .site-map .nav-link{
+    font-size: 1.5em;
+}
+
+footer .icons{
+    margin-top: 0;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer .contact{
+    margin-top: 35px;
+    font-size: 1.2em;
+}
+
+footer .contact h3{
+    margin-bottom: 5px;
+}
+
+footer iframe{
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+footer .ropra a{
+    color: var(--navtext)
+}
+
+@media (max-width: 767px){
+    footer .row{
+        height: 1000px;
+    }
+    footer .contact{
+        height: 300px;
+    }
+    /*footer .icons{
+        margin-top: 250px;
+    }*/
+    footer iframe{
+        width: 100%;
+        position: relative;
+        height: 120px;
+        top: 30px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (min-width: 2560px){
+    #pagebanner {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
 }

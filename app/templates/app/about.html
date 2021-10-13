@@ -2,15 +2,39 @@
 
 {% block content %}
 
-<h2>{{ title }}</h2>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'app/content/about.css' %}" />
 
-<h3>Company History</h3>
-<p>Use this area to provide additional information.</p>
+<div class="banner" id="pagebanner">
+    <div class="container">
+        <h2 class="pageheading">About EME Ready Mix</h2>
+    </div>
+</div>
 
-<h3>Our Fleet</h3>
-<p>Use this area to provide additional information.</p>
+<section class="about">
+    <div class="container">
+        <h2><strong>Company History</strong></h2>
+            <p>
+                EME Ready Mix was founded in 2019 by Eduardo Luna and Manuel Duran, with the vision to become a premier ready mix concrete provider to the construction boom in the Austin 
+                Metropolitan Area. Eduardo and Manuel have a combined 50 years of experience in the construction industry providing logistics and contracting services to a myriad of 
+                construction projects. Additionally, they have built a network of construction professionals who support EME Ready Mix and supply the company with material, trucks, and 
+                equipment. The founders of EME Ready Mix have been working hard to establish a recognized company that provides concrete services to construction projects. 
+            </p>
+            <p>
+                What sets EME Ready Mix apart from the competition is the timely, accurate, and friendly service that it has been providing clients since the beginning.  
+            </p>
+        <h2><strong>Our Fleet</strong></h2>
+            <p>Use this area to provide additional information.</p>
 
-<h3>Industries We Serve</h3>
-<p>Use this area to provide additional information.</p>
+        <h2><strong>Industries We Serve</strong></h2>
+        <p>
+            Our concrete experience includes residential projects such as home foundations, patios, pools, sidewalks, driveways, multi-family 
+            dwellings, and concrete slabs. We also have extensive experience providing ready mix concrete services to commercial projects such as 
+            retail, manufacturing facilities, automotive shops, higher education, restaurants, and sporting complexes. EME Ready Mix is an 
+            experienced company that has the infrastructure to take on a concrete project of any size.
+        </p>
+    </div>
+</section>
+
 
 {% endblock %}

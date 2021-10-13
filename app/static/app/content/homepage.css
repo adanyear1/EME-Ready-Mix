@@ -1,38 +1,119 @@
-body {
+:root {
+    --heading-font: 'Aleo', serif;
+    --paragraph-font: 'Aleo', serif;
+    --bkg-color: #B3B6B7;
 }
 
-.jumbotron {
-    background-image: url("../images/homeb.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.carousel-item img{
     height: 480px;
-    width: auto;
+    background-size: 100% 100%;
+    background-size: cover;
+    width: 100%;
+}
+.page-content{
+    margin-top: 15px;
 }
 
-.row{
-    border-color: maroon;
+.about-home p {
+    font-family: var(--paragraph-font);
+    font-size: 1.5em;
+}
+
+
+.abouthead {
+    font-family: var(--heading-font);
+}
+
+
+.page-icons .row{
+    width: 100%;
+}
+
+.page-icons h2 {
+    margin-bottom: 15px;
+    font-family: var(--heading-font);
+}
+
+.page-icons .col-md-4{
+    text-align: center;
+}
+
+#icon {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 18rem;
+}
+
+.maphead {
+    font-family: var(--heading-font);
+    text-align: left;
+}
+
+.misc-home{
     color: black;
-    width: auto;
 }
 
-.col-1{
-    background-image: url("../images/services.png");
-    text-align: center;
-    height: 300px;
-    width: 300px;
+.city-list {
+    font-family: var(--paragraph-font);
+    font-size: 1.8rem;
 }
 
-.col-2 {
-    background-image: url("../images/gallery.png");
-    text-align: center;
-    height: 300px;
-    width: 300px;
+.sustainability h2,
+.sustainability h3{
+    color: black;
+    font-style: var(--heading-font);
 }
 
-.col-3 {
-    background-image: url("../images/quotehome.png");
-    text-align: center;
+.sustainability p{
+    color: black;
+    font-style: var(--paragraph-font);
+    font-size: 1.2em;
+}
+
+.sust-img {
+    width: 100%;
     height: 300px;
-    width: 300px;
+}
+
+@media (max-width: 767px){
+    #section-container {
+        padding: 0;
+    }
+    .carousel-item img {
+        height: 240px;
+    }
+}
+
+@media (min-width: 768px){
+    #section-container{
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .carousel-item img{
+        height: 360px;
+    }
+}
+
+@media (max-width: 991px){
+    #section-container{
+        margin: 0;
+        padding: 0;
+    }
+    .carousel-item img{
+        width: 100%;
+    }
+}
+
+@media (min-width: 2560px) {
+    .carousel-item img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    /*footer{
+        position: absolute;
+    }*/
 }

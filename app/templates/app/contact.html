@@ -2,29 +2,68 @@
 
 {% block content %}
 
-<h2>{{ title }}</h2>
-<h3>{{ message }}</h3>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'app/content/contact.css' %}" />
 
-<address>
-    <strong>Jose Rodriguez, CEO</strong><br />
-    <abbr title="Phone">Front Desk: </abbr>512-000-0100 <br />
-    <strong>Email: <a href="mailto:Support@example.com">Support@example.com</a></strong><br />
-    <strong>Juan Garcia, Sales Manager</strong><br />
-    <abbr title="Phone">Front Desk: </abbr>512-000-0200 <br />
-    <strong>Email: <a href="mailto:Marketing@example.com">Marketing@example.com</a></strong><br />
-</address>
+<div class="banner" id="pagebanner">
+    <div class="container">
+        <h2 class="pageheading">Contact EME Ready Mix</h2>
+        <h3>We Are Happy To Connect With You & Provide Our Concrete Services</h3>
+    </div>
+</div>
 
-<!--Add Form To Fill Out Option-->
-<!--Add Google Maps Option-->
-<address>
-    <b>Main Office</b><br />
-    123 Old Settlers Dr<br />
-    Round Rock, TX 78665<br />
-    <abbr title="Phone">Front Desk:</abbr>
-    512-000-0000 
-</address>
+<section class="contactpage">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <address>
+                    <b>Manuel Duran</b><br />
+                    <b title="Phone">Cell: </b>512-897-6278<br />
+                    <b>Eduardo Luna</b><br />
+                    <b title="Phone">Cell: </b>512-800-1803<br />
+                </address>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3436.2415655717377!2d-97.65606108487306!3d30.542478381703873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644d0fdb8846889%3A0x231581a2b9311172!2sE%20Old%20Settlers%20Blvd%2C%20Texas!5e0!3m2!1sen!2sus!4v1592972097099!5m2!1sen!2sus" width="300" height="225" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <address>
+                    <b>Ready Mix Plant Address</b><br />
+                    11970 N Hwy 183<br />
+                    Florence, TX, 76527<br />
+                    <strong title="Phone">Dispatch:</strong>
+                    737-781-6932
+                </address>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13705.238534036755!2d-97.8956801!3d30.821989!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1451955ce57fc5c1!2sEME%20Ready%20Mix!5e0!3m2!1sen!2sus!4v1633979162880!5m2!1sen!2sus" max-width="300" max-height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="col-md-6">
+                <h4><strong>Send Us a Message!</strong></h4>
+                <form action="" method="POST">
+                {% csrf_token %}
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" class="form-control" id="company" placeholder="Company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">First & Last Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="First & Last Name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="emailaddress@example.com" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" class="form-control" id="phone" placeholder="Phone Number" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="5" name="message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 
 

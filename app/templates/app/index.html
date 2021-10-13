@@ -5,30 +5,108 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'app/content/homepage.css' %}" />
 
-<div class="image-hero">
+
+<!--<div class="image-hero">
     <div class="jumbotron">
     </div>
-</div>
+</div>-->
 
-<div class="row">
-    <div class="col-md-4">
-        <div class="col-1">
-            <h2>Services</h2>
-            <a href="services/"></a>
+<section class="heading">
+    <div class="container" id="section-container">
+        <div id="carousel-home" class="carousel slide" data-ride="carousel" style="width: 100%">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../../static/app/images/emehome.jpg" class="d-block" alt="EME Mixer">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../static/app/images/emehome2.jpg" class="d-block" alt="EME Mixer">
+                </div>
+                <div class="carousel-item">
+                    <img src="../../static/app/images/emehome3.jpg" class="d-block" alt="EME Mixer">
+                </div>
+            </div>
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="col-2">
-            <h2>Gallery</h2>
-            <p><a class="btn btn-default" href="gallery/">Learn more &raquo;</a></p>
+</section>
+
+
+
+<section class="about-home page-content">
+    <div class="container">
+        <h2 class="abouthead"><strong>About EME Ready Mix</strong></h2>
+            <p>
+                A premier ready mix concrete provider in the Austin Metropolitan Area that has been in business since 2019. The company has a ready-mix plant in Florence, TX, where it 
+                makes its own ready mix concrete product, and is prepared for transportation using strict guidelines set by the companies leadership. With an extensive experience providing 
+                concrete services to both residential and commercial projects, EME Ready Mix has developed a strong relationship with construction companies working in the Austin Metropolitan 
+                Area. 
+            </p>
+        </div>
+</section>
+
+<section class="page-icons page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2><strong>Services</strong></h2>
+                <a href="services/"><i class="fa fa-handshake-o" aria-hidden="true" id="icon"></i></a>
+            </div>
+            <div class="col-md-4">
+                <h2><strong>Gallery</strong></h2>
+                <a href="gallery/"><i class="fa fa-camera" aria-hidden="true" id="icon"></i></a>
+            </div>
+            <div class="col-md-4">
+                <h2><strong>Quick Quote</strong></h2>
+                <a href="quickquote/"><i class="fa fa-calculator" aria-hidden="true" id="icon"></i></a>
+            </div>
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="col-3">
-            <h2>Quick Quote</h2>
-            <p><a class="btn btn-default" href="quickquote/">Learn more &raquo;</a></p>
+</section>
+
+<section class="misc-home page-content">
+    <div class="container">
+        <h2 class="maphead"><strong>Areas We Serve</strong></h2>
+        <div class="row">
+            <div class="col-md-6 areamap">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1Psb0E1JTkK4E_6NaZQ25LW3kZYR0K8Hx" width="100%" height="380"></iframe>
+            </div>
+            <div class="col-md-6">
+                <p class="city-list">
+                    EME Ready Mix provides concrete services to the Austin Metropolitan Area. We have been serving the following areas:
+                </p>
+                <p class="city-list">
+                    Round Rock, Austin, Georgetown, Leander, Bastrop, Manor, Elgin, Lago Vista, Cedar Park, Dripping Springs, Buda, Kyle, Cedar Creek, Taylor, Hutto, Granger, Florence, Jarrell,
+                    Lampassas, & Killen/Harker Heights
+                </p>
+                <p class="city-list">
+                    We are not limited to serving these areas. If you have a project outside of these areas please don't hesitate to contact us via our <a href="contact.html">contact page</a> or give us a call at 737-781-6932. 
+                </p>
+            </div>
         </div>
     </div>
-</div>
+</section>
+
+<section class="sustainability page-content">
+    <div class="container">
+        <h2><strong>Sustainability</strong></h2>
+        <div class="row">
+            <div class="col-md-7">
+                <h4><strong>We Have Developed Sustainable Business Practices as our Commitment to the Future of the Communities We Serve</strong></h4>
+                <p>
+                    As a company we are proud to have helped build foundations for homes, sidewalks for shopping centers, pools for community centers, 
+                    and roads. We are heavily involved of the growth of our community, which is why we have adopted sustainable business processes. Not only do 
+                    we take care of our clients needs, we also perform business in eco-friendly manners. Our fleet consists of the most fuel-efficient trucks 
+                    in the market, and we use the least amount of natural resources in our ready mix product. EME Ready mix values <strong>excellence, honesty, 
+                    professionalism, and safety</strong>, which is seen in every aspect of our business. 
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img src="../../static/app/images/sustainable.jpg" class="sust-img" alt="Sustainability">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
 
 {% endblock %}

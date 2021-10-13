@@ -1,22 +1,74 @@
 ﻿{% extends "app/layout.html" %}
-{% block content %}
 
-<h2>{{ title }}</h2>
-<h3>{{message}}</h3>
+{% block content %}
 
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'app/content/quickquote.css' %}" />
 
+<div class="banner">
+    <div class="container">
+        <h2>Recieve A Quick Quote For Your Project</h2>
+        <p>
+            Fill out the form bellow to recieve a quote and schedule a concrete pour. We will respond to you within 1 business day with your quote and details 
+            of when we will schedule our concrete services to assist you with your project.
+        </p>
+    </div>
+</div>
+
+<section class="quote_form">
+    <div class="container">
+    <h1 class="title">Enter You Information</h1>
+        <form action="" method="POST">
+        {% csrf_token %}
+            <div class="contact-form row">
+                <div class="form-group col-md-6">
+                    <label for="company">Company Name</label>
+                    <input type="text" class="form-control" id="company" placeholder="Company" name="company">
+                </div>
+                <div class="form-group col-md-6">
+                        <label for="name">First & Last Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="First & Last Name" name="name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="emailaddress@example.com" name="email">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Phone Number" name="phone">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="date">Project Date</label>
+                    <input type="date" class="form-control" id="date" placeholder="Project Date" name="projectdate">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="address">Job Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="Project Address" name="address">
+                </div>
+                <div class="form-group col-lg-12">
+                    <label for="message">Project Details</label>
+                    <textarea id="message" class="form-control" name="message" rows="8" style="min-width:100px; max-width:100%;min-height:50px;width:100%;"></textarea>
+                </div>
+                <div class="form-field col-lg-12">
+                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+
+<!--<form action="https://formspree.io/xyynlepa" method="POST" enctype="text/plain">-->
 <!--Making an Input List-->
 <!--Useing php, js, or jquery-->
-<div class="formsectionwrapper">
-    <label for="companyname">Company Name</label>
-    <input form="companyname" id="companyname" placeholder="Company Name" required="" type="text" size="20"/>
-    <label for="street">Street</label>
-    <input form="street" id="street" placeholder="Street" required="" type="text" size="20"/>
-    <label form="city">City</label>
-    <input form="city" id="city" placeholder="City" required="" type="text" size="20">
-    <label for="state">State</label>
+    <!--<label for="companyname">Company Name</label><br />
+    <input form="companyname" id="companyname" placeholder="Company Name" required="" type="text" size="20"/><br />
+    <label for="street">Street</label><br />
+    <input form="street" id="street" placeholder="Street" required="" type="text" size="20"/><br />
+    <label form="city">City</label><br />
+    <input form="city" id="city" placeholder="City" required="" type="text" size="20"><br />
+    <label for="state">State</label><br />
         <select typeof="state" name="state">
     <option value="" selected="selected">- Select a State -</option>
         <option value="AL">Alabama</option>
@@ -72,28 +124,24 @@
         <option value="WY">Wyoming</option>
         <option value="PR">Puerto Rico</option>
         <option value="VI">Virgin Islands</option>
-        </select>
-    <label for="zip">Zip</label>
-    <input name="zip" id="zip" placeholder="Zip" required="" type="text" size="20" />
-    <label for="firstname">First Name</label>
-    <input name="firstname" id="firstname" placeholder="First Name" required="" type="text" size="20" />
-    <label for="lastname">Last Name</label>
-    <input name="lastname" id="lastname" placeholder="Last Name" required="" type="text" size="20" />
-    <label for="phonenumber">Phone Number</label>
-    <input name="phonenumber" id="phonenumber" placeholder="Phone Number" required="" type="text" size="20" />
-    <label for="cargodate">Cargo Date</label>
-    <input name="cargodate" id="cargodate" placeholder="Cargo Date" required="" type="text" size="20" />
-    <label for="origin">Origin</label>
-    <input name="origin" id="origin" placeholder="Origin" required="" type="text" size="20" />
-    <label for="destination">Destination</label>
-    <input name="destination" id="destination" placeholder="Destination" required="" type="text" size="20" />
-    <label for="additionalinfo">Additional Info</label>
-    <input name="additionalinfo" id="additionalinfo" placeholder="Additional Info" required="" type="text" size="500" />
-</div>
-
-<div>
+        </select><br />
+    <label for="zip">Zip</label><br />
+    <input name="zip" id="zip" placeholder="Zip" required="" type="text" size="20" /><br />
+    <label for="firstname">First Name</label><br />
+    <input name="firstname" id="firstname" placeholder="First Name" required="" type="text" size="20" /><br />
+    <label for="lastname">Last Name</label><br />
+    <input name="lastname" id="lastname" placeholder="Last Name" required="" type="text" size="20" /><br />
+    <label for="phonenumber">Phone Number</label><br />
+    <input name="phonenumber" id="phonenumber" placeholder="Phone Number" required="" type="text" size="20" /><br />
+    <label for="cargodate">Cargo Date</label><br />
+    <input name="cargodate" id="cargodate" placeholder="Cargo Date" required="" type="text" size="20" /><br />
+    <label for="origin">Origin</label><br />
+    <input name="origin" id="origin" placeholder="Origin" required="" type="text" size="20" /><br />
+    <label for="destination">Destination</label><br />
+    <input name="destination" id="destination" placeholder="Destination" required="" type="text" size="20" /><br />
+    <label for="additionalinfo">Additional Info</label><br />
+    <input name="additionalinfo" id="additionalinfo" placeholder="Additional Info" required="" type="text" height="800" width="800" /><br />
     <input type="submit" value="Submit" />
-</div>
-
+</form>-->
 
 {% endblock %}

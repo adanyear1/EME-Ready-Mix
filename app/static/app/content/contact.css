@@ -1,3 +1,18 @@
-body
-{
+#pagebanner {
+    background-image: url("../../../static/app/images/contact.jpg");
+    margin-bottom: 20px;
+    height: 300px;
+}
+
+.banner h2{
+    margin-top: 10%;
+    text-align: center;
+}
+
+.banner h3{
+    text-align: center;
+}
+
+.contactpage address{
+    font-size: 1.4em;
 }
